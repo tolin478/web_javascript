@@ -65,24 +65,34 @@ for (var i = 1; i < 9; i++) {
 }
 
 //#7
-// initialize the variables
 let hunger_state, decide_to_eat, go_out, check_fridge, pick_ingredients, grocery_store;
 
-// get input for the first checkpoint
-hunger_state = prompt( "Am I hungry? Y/N " );
+hunger_state = prompt( "are you hungry? y/n");
 
-// create the first decision
-if ( hunger_state === "Y") {
-  // i am hungry, now ask how much money
-  money_in_pocket = prompt( "How much money do I have?" );
-  if ( money_in_pocket >= 20 ) {
-    // Ok cool! I have more than $20! Order pizza!
-    console.log('Action: Order PIZZA!' );
-    console.log('After pizza, play Overwatch!' );
-  } else {
-    // ok - not enough money, raid the fridge!
-    console.log('Action: Search your fridge!' );
+if ( hunger_state === "y") {
+
+  decide_to_eat = prompt( "go out or check fridge?" );
+
+  if ( decide_to_eat === "go out" ) {
+    go_out = prompt("old restaurant or new restaurant?");
+
+      if(go_out === "old restaurant"){
+        console.log("you go to your favorite restaurant and eat")
+      }else if(go_out === "new restaurant"){
+        console.log("you find a new restaurant on yelp and go eat")
+      }
+
+  } else if(decide_to_eat === "check fridge") {
+
+      check_fridge = prompt("are there ingredients for food? y/n");
+
+      if(check_fridge === "y"){
+        console.log("you make a meal and eat it");
+      }else if(check_fridge === "n"){
+        console.log("you go to the grocery store, buy ingredients, make a meal and eat it");
+      }
+
   }
-} else if(hunger_state === "N") { // not hungry
-  console.log("don't eat");
+} else if(hunger_state === "n") { // not hungry
+  console.log("you decide not to eat");
 }
