@@ -28,7 +28,7 @@ if(rolled2<=3){
 }
 
 if(rolled2>3){
-  console.log("num is greater than 3");
+  console.log("#3: num is greater than 3: " + rolled2);
 }
 
 //#4
@@ -42,27 +42,36 @@ function factorialize(num) {
 }
 
 //#5
-var triangle = document.getElementById("triangle");
-// for(i=0;i<10;i++){
-//   for(i=0;i<5;i--)
-//   console.log("#");
-// }
+var line, triangle;
+line = triangle = "";
 
+for (var row = 1; row <= 7; row++) {
+  line =""
+  for (var x = 0; x < row; x++) {
+    line += "#";
+  }
+  triangle += line + "\n";
+}
 
+console.log(triangle);
 
 
 //#6
-var checkerboard = document.getElementById("checkerboard");
+let length=9;
+let board = "";
 
-for (var i = 1; i < 9; i++) {
-    for (var j = 1; j < 9; j++) {
-        if (i % 2 == 0 || j % 2 == 0) {
-            checkerboard.innerHTML = " ";
-        } else {
-            checkerboard.innerHTML = "#";
-        }
+for(i=0;i<length;i++){
+  for(j=0;j<length;j++){
+    if((i+j)%2 == 0){
+      board += " ";
+    }else{
+      board += "#";
     }
+  }
 }
+
+console.log(board);
+
 
 //#7
 let hunger_state, decide_to_eat, go_out, check_fridge, pick_ingredients, grocery_store;
