@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>cooper hewitt palettes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" href="fav.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <style>
+
+      body{
+        margin:0;
+        padding:0;
+        overflow-y:hidden;
+        background-color: oldlace;
+      }
+
+      #container{
+        width:100vw;
+        text-align:center;
+        position:relative;
+      }
+
+      #title{
+        width:70vw;
+        text-align:center;
+        margin-left:3vw;
+        position:absolute;
+      }
+
+      h1{
+        font-family:"Work Sans";
+        font-size:60px;
+        font-weight:bold;
+        text-align:left;
+      }
+
+      .colorblock{
+        width:33vw;
+        height:66vw;
+        background-color:oldlace;
+        display:inline-block;
+        opacity:1;
+        margin:-1.8px;
+      }
+
+      .colorblock:hover .hexcode{
+        opacity:1;
+      }
+
+      #firstcolor{
+        transition: 1s ease;
+      }
+
+      #secondcolor{
+        transition: 1s ease;
+      }
+
+      #thirdcolor{
+        transition: 1s ease;
+      }
+
+      nav{
+        position:absolute;
+        display:inline-block;
+        text-align:right;
+        width:100vw;
+        height:5vw;
+        margin:20px;
+        margin-left:-3vw;
+      }
+
+      a{
+        color:black;
+        font-size:28px;
+        font-family: "Work Sans";
+        font-weight:bold;
+        text-decoration:none;
+      }
+
+      a:hover{
+        color:white;
+      }
+
+      a:clicked{
+        color:black;
+      }
+
+      button{
+        background:none;
+        border:none;
+        font-family: "Work Sans";
+        font-size:28px;
+        margin-right:2vw;
+        font-weight:bold;
+        text-decoration:none;
+      }
+
+      button:hover{
+        color:oldlace;
+      }
+
+      .hexcode{
+        font-family:"Work Sans";
+        font-size:24px;
+        color:oldlace;
+        position:relative;
+        text-align:center;
+        margin-top:25vw;
+        opacity:0;
+        transition: .3s ease;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id=container>
+
+        <div id=title>
+          <h1>a palette based on a random piece from the cooper hewitt</h1>
+        </div>
+
+        <nav>
+          <button onclick="refresh()">new</button>
+          <a href="https://collection.cooperhewitt.org/api/" target="_blank">source data</a>
+        </nav>
+
+        <div class=colorblock id=firstcolor>
+          <div class=hexcode id=firsthex>hexcode</div>
+        </div>
+
+        <div class=colorblock id=secondcolor>
+          <div class=hexcode id=secondhex>hexcode</div>
+        </div>
+
+        <div class=colorblock id=thirdcolor>
+          <div class=hexcode id=thirdhex>hexcode</div>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+  </body>
+
+</html>
