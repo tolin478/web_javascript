@@ -38,6 +38,8 @@ header{
 #prompttext{
   font-family:"Poppins";
   font-size:72px;
+  width:50vw;
+  margin-left:25vw;
 }
 
 #textentry{
@@ -49,7 +51,7 @@ header{
   /* border-radius:5vw; */
   border-bottom:solid black 3px;
   font-family:"Poppins";
-  font-size:72px;
+  font-size:68px;
   color:white;
 }
 
@@ -59,4 +61,6 @@ header{
 
 #submitbutton{
   margin-top:5vh;
+  font-family:"Poppins";
+  font-size:36px;
 }
